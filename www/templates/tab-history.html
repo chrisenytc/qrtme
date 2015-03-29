@@ -1,0 +1,35 @@
+<ion-view view-title="History">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon icon ion-ios-minus-outline" ng-click="deleteToggle()"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-ios-trash-outline" ng-click="clearDatabase()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-refresher on-refresh="refresh()" pulling-text="Pull to refresh" refreshing-text="Loading..." refreshing-icon="ion-loading-c">
+        </ion-refresher>
+        <div class="bar bar-header item-input-inset">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios7-search placeholder-icon"></i>
+                <input type="search" placeholder="Search" ng-model="searchBox">
+            </label>
+            <button class="button button-clear" ng-click="searchBox = ''">
+                Cancel
+            </button>
+        </div>
+        <ion-list show-delete="showDelete">
+            <ion-item ng-repeat="h in history | filter: searchBox" href="#/tab/history/{{$index}}" class="qrtme-animate">
+                <span ng-bind="h.url"></span>
+                <ion-delete-button class="ion-minus-circled" ng-click="remove($index)">
+                </ion-delete-button>
+            </ion-item>
+        </ion-list>
+        <div class="card" ng-hide="history.length">
+            <div class="item item-text-wrap">
+                <p class="about-description text-center">
+                    No have urls at moment
+                </p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

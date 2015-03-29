@@ -1,0 +1,74 @@
+.popup-body {
+    overflow: hidden !important;
+}
+
+.copyright {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.text-center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ccc;
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.qrtme-bg {
+    background: url(../img/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.qrtme-animate.ng-enter {
+    -webkit-animation: bounceInRight 1s;
+    -moz-animation: bounceInRight 1s;
+    -ms-animation: bounceInRight 1s;
+    animation: bounceInRight 1s;
+}
+
+.qrtme-animate.ng-move {
+    -webkit-animation: bounceInRight 1s;
+    -moz-animation: bounceInRight 1s;
+    -ms-animation: bounceInRight 1s;
+    animation: bounceInRight 1s;
+}
+
+.qrtme-animate.ng-leave {
+    -webkit-animation: bounceOutLeft 1s;
+    -moz-animation: bounceOutLeft 1s;
+    -ms-animation: bounceOutLeft 1s;
+    animation: bounceOutLeft 1s;
+}
+
+.qrtme-animate-show.ng-hide {
+    -webkit-animation: zoomOut 1s;
+    -moz-animation: zoomOut 1s;
+    -ms-animation: zoomOut 1s;
+    animation: zoomOut 1s;
+}
+
+.qrtme-animate-show,
+.qrtme-animate-show.ng-show {
+    -webkit-animation: zoomIn 1s;
+    -moz-animation: zoomIn 1s;
+    -ms-animation: zoomIn 1s;
+    animation: zoomIn 1s;
+}

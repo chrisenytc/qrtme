@@ -1,0 +1,19 @@
+<ion-view view-title="Details">
+    <ion-content class="padding pulse animated qrtme-bg">
+        <div class="card">
+            <div class="text-center">
+                <div class="item item-divider">
+                    Details
+                </div>
+                <div class="item item-text-wrap">
+                    <h2>
+                        {{history.url}}
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div>
+            <a class="button button-block button-positive" href="javascript:void(0)" ng-click="copytoClipboard(history.url)">Copy to Clipboard</a>
+        </div>
+    </ion-content>
+</ion-view>

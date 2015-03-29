@@ -1,0 +1,31 @@
+<ion-view view-title="QRtme">
+    <ion-content class="padding pulse animated qrtme-bg">
+        <div class="card" ng-show="showResult">
+            <div class="text-center">
+                <div class="item item-divider">
+                    Result
+                </div>
+                <div class="item item-text-wrap">
+                    <h2>
+                        {{qrcode.text}}
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div ng-show="showResult">
+            <a class="button button-block button button-positive" href="javascript:void(0)" ng-click="copytoClipboard(qrcode.text)">Copy to Clipboard</a>
+            <a class="button button-block  button-dark" href="javascript:void(0)" ng-click="scanQRCode()">Scan a new QRCode</a>
+        </div>
+        <div ng-hide="showResult">
+            <p class="text-center">
+                <img src="img/logo.png" width="228px" height="228px">
+            </p>
+            <a class="button button-block button-positive" href="javascript:void(0)" ng-click="scanQRCode()">Scan a QRCode</a>
+            <p  class="text-center copyright">
+                EnyTC Corporation<br/>
+                © {{ copyrightYear }}
+            </p>
+        </div>
+        </div>
+    </ion-content>
+</ion-view>
